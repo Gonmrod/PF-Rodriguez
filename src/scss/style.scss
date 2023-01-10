@@ -155,7 +155,6 @@
     left: 0;
     top: 0px;
     width: 100%;
-
     z-index: -10;
     overflow: hidden;
         }
@@ -186,6 +185,8 @@ main{
 }
 .subtitulo {
     margin: 10px;
+    color: rgb(92, 41, 17);
+    font-size: x-large;
 }
 .tarjetas{
     display: flex;
@@ -194,12 +195,13 @@ main{
 }
 .tarjeta{
     display: flex;
-    width: 350px;
-    gap: 10px;
+    width: 250px;
+    gap: 5px;
+    padding-bottom: 75px;
     margin: 10px;
 }
 .tarjeta img {
-    width: 120px;
+    width: 180px;
 }
 
 aside{
