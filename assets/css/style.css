@@ -4,37 +4,6 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: fontAwesome;
-  src: url(../fonts/fa-solid-900.ttf);
-}
-.bodyConAside {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100px 300px 1fr 100px;
-  grid-template-areas: "nav    nav    nav    nav" "header header header header" "main   main   main   aside" "footer footer footer footer";
-}
-
-@media (max-width: 576px) {
-  .bodyConAside {
-    grid-template-rows: 70px 200px auto auto auto;
-    grid-template-areas: "nav    nav    nav    nav" "header header header header" "main   main   main   main" "aside aside   aside  aside" "footer footer footer footer";
-  }
-}
-.bodySinAside {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100px 300px 1fr auto;
-  grid-template-areas: "nav    nav    nav    nav" "header header header header" "main   main   main   main" "footer footer footer footer";
-}
-
-.bodyPages {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 100px 100% auto;
-  grid-template-areas: " nav    nav    nav    nav" "main   main   main   main" "footer footer footer footer";
-}
-
 /*login*/
 .body-login {
   background-size: cover;
@@ -122,6 +91,37 @@
 
 .login-box a:hover {
   color: #fff;
+}
+
+@font-face {
+  font-family: fontAwesome;
+  src: url(../fonts/fa-solid-900.ttf);
+}
+.bodyConAside {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 300px 1fr 100px;
+  grid-template-areas: "nav    nav    nav    nav" "header header header header" "main   main   main   aside" "footer footer footer footer";
+}
+@media (max-width: 576px) {
+  .bodyConAside {
+    grid-template-rows: 70px 200px auto auto auto;
+    grid-template-areas: "nav    nav    nav    nav" "header header header header" "main   main   main   main" "aside aside   aside  aside" "footer footer footer footer";
+  }
+}
+
+.bodySinAside {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 300px 1fr auto;
+  grid-template-areas: "nav    nav    nav    nav" "header header header header" "main   main   main   main" "footer footer footer footer";
+}
+
+.bodyPages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px 100% auto;
+  grid-template-areas: " nav    nav    nav    nav" "main   main   main   main" "footer footer footer footer";
 }
 
 .navegador {
@@ -257,6 +257,11 @@
 @media (max-width: 576px) {
   .encabezado video {
     padding-bottom: 126px;
+  }
+}
+@media (min-width: 0px) {
+  .encabezado video {
+    height: 75vh;
   }
 }
 
