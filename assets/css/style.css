@@ -140,13 +140,6 @@
   color: white;
 }
 
-.icono img {
-  margin-left: -800px;
-  margin-top: -25px;
-  position: absolute;
-  size: auto;
-}
-
 .fa-bars {
   display: none;
 }
@@ -615,5 +608,31 @@ img {
   }
   100% {
     transform: translateX(-300%);
+  }
+}
+/* Map responsive*/
+.map-responsive {
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  top: 1%;
+  right: 25%;
+  height: 49.8vh;
+  width: 60vw;
+  position: absolute;
+  padding-left: 10%;
+}
+
+@media (max-width: 700px) {
+  .map-responsive iframe {
+    top: 5%;
+    right: 25%;
+    left: 10%;
+    height: 49.8vh;
+    width: 80vw;
+    position: absolute;
+    padding-left: 0%;
   }
 }/*# sourceMappingURL=style.css.map */
