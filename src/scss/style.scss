@@ -47,6 +47,24 @@
     align-items: center;
     justify-content: end;
 }
+.navegador-info{
+    
+    h1{
+
+        margin-left: -500px; 
+        color: white;
+    }
+}
+
+.icono{
+    
+    img{
+        margin-left: -800px;
+        margin-top: -25px;
+        position: absolute;
+      
+    }
+}
 .fa-bars{
     display: none;
 }
@@ -185,13 +203,16 @@ main{
 }
 .subtitulo {
     margin: 10px;
-    color: rgb(92, 41, 17);
+    color: rgb(238, 255, 0);
+    font-family:monospace;
     font-size: x-large;
 }
 .tarjetas{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background: rgb(236, 206, 206);
+    box-shadow: 4px 4px 4px 4px black;
 }
 .tarjeta{
     display: flex;
@@ -199,9 +220,23 @@ main{
     gap: 5px;
     padding-bottom: 75px;
     margin: 10px;
+    padding-top: 20px;
+}
+.tarjeta-info{
+    h3{
+        text-align: center;
+    }
+    p{
+        text-align: center ;
+    }
+    
 }
 .tarjeta img {
     width: 180px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 2px black;
+    margin-right: 10px;
+    
 }
 
 aside{
@@ -365,6 +400,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    background-color:#181818fa;
 
 }
 
@@ -383,6 +419,7 @@ footer > .sucursales > .sucursal{
 
 footer > .sucursales {
     display: flex;
+    gap: 180px;
     padding: 10px;
 
 }
