@@ -4,7 +4,11 @@
     box-sizing: border-box;
 }
 $colorMain:  #a53636;
+@import "navegador";
+@import "footer";
 @import "login";
+@import "galeria";
+
 
 @font-face {
     font-family: fontAwesome ;
@@ -104,7 +108,7 @@ $colorMain:  #a53636;
     position: absolute;
     z-index: 2;
     list-style-type: none;
-    background-color: #a53636;
+    background-color: $colorMain;
     left: -10px;
     transition: 0.5s;
     
@@ -145,7 +149,7 @@ $colorMain:  #a53636;
         justify-content: start;
         align-items: center;
         padding-top: 70px;
-        background-color: #a53636;
+        background-color: $colorMain;
         width: 250px;
         height: 100vh;
         transition: 0.2s;
@@ -214,18 +218,9 @@ main{
 }
 .main-contacto{
 
-    background-color: #a53636;
+    background-color: $colorMain;
 }
 
-.btn{
-    margin-top: 10px;
-    padding: 5px 25px;
-    background-color: #121fb3 ;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-}
 .subtitulo {
     margin: 10px;
     color: rgb(211, 184, 34);
@@ -236,7 +231,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background: #a53636;
+    background: $colorMain;
     box-shadow: 4px 4px 4px 4px black;
 }
 .tarjeta{
@@ -267,35 +262,6 @@ main{
 
 aside{
     grid-area: aside;
-}
-.publicidades{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.publicidad {
-    width: 150px;
-    height: 100px;
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 10px;
-}
-.publicidad h4{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    font-size: 12px;
-    padding: 5px;
-    background-color: rgba(0, 0, 0, 0.582);
-    color: white;
-}
-
-.publicidad img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 footer{
     grid-area: footer;
@@ -384,85 +350,7 @@ footer{
     color: white;
 }
 
-.btn2{
-    background-color: transparent;
-    border: none;
-    color: white;
-    padding: 12px 18px;
-    position: relative;
-    z-index: 1;
-    margin: 10px;
-}
-.btn2 > i {
-    margin-left: 20px;
-}
 
-.btn2::before{
-    content: "";
-    width: 45px;
-    height: 45px;
-    border-radius: 50px;
-    background-color: red;
-    position: absolute;
-    z-index: -1;
-    left: 83px;
-    transform: translate(0,-50%);
-    top: 50%;
-    transition: width 0.25s ,left 0.25s 0.25s;
-
-}
-
-.btn2:hover::before{
-    left: 0;
-    width: 100%;
-    transition: left 0.25s , width 0.25s 0.25s;
-    
-
-
-}
-
-footer{
-    color: white;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background-color:#181818fa;
-
-}
-
-footer .compania{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    
-}
-
-footer > .sucursales > .sucursal{
-    width: 200px;
-    padding: 10px;
-}
-
-footer > .sucursales {
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-
-}
-footer > .sucursales > .sucursal h3{
-    margin-bottom: 10px;
-}
-footer > .sucursales > .sucursal >ul{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    list-style-type: none;
-}
-
-footer > .sucursales > .sucursal > ul > li> a{
-    color: inherit;
-    text-decoration: none;
-}
 @media(max-width:630px){
     footer > .sucursales {
        flex-wrap: wrap;
@@ -470,57 +358,7 @@ footer > .sucursales > .sucursal > ul > li> a{
     
     }
 }
-/*Galeria*/
-.contenido-contacto {
-background-color: #a53636;
-height: 50vh;
-}
-.gallery {
-  width: 100vmin;
-  position: relative;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
-  overflow: hidden;
-  border: 10px solid #ffffff;
-  border-radius: 8px;
-  box-shadow: 10px 25px 30px rgba(0, 0, 0, 0.3);
-}
-.wrapper-gallery {
-  width: 100%;
-  display: flex;
-  animation: slide 14s infinite;
-}
 
-img {
-  width: 50%;
-}
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(0);
-  }
-  40% {
-    transform: translateX(-100%);
-  }
-  60% {
-    transform: translateX(-100%);
-  }
-  70% {
-    transform: translateX(-200%);
-  }
-  80% {
-    transform: translateX(-200%);
-  }
-  90% {
-    transform: translateX(-300%);
-  }
-  100% {
-    transform: translateX(-300%);
-  }
-}
 /* Map responsive*/
 .map-responsive {
     position: relative;
