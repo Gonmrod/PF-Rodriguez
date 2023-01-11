@@ -1,0 +1,70 @@
+.formulario{
+    background-color:#2b281f ;
+    max-width: 800px;
+    margin: 20px auto ;
+    border-radius: 10px;
+    color: white;
+    padding: 30px;
+    margin-bottom: 10px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas:  "zona1    zona1"
+                          "zona2    zona3"
+                          "zona4    zona5"
+                          "zona6    zona6"
+                          "zona7    zona7";
+    @media(max-width:800px){
+        width: 100vw;
+        margin: 20px 0px;
+        border-radius: 0px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+        grid-template-areas:  "zona1"
+                              "zona2"
+                              "zona3"
+                              "zona4"
+                              "zona5"
+                              "zona6"
+                              "zona7";
+                    }
+    @for $var from 1 to 8{
+        @if($var == 1){
+            h2:nth-child(#{$var}){
+                grid-area: zona#{$var};
+            }    
+    }
+    @else if($var == 7){
+        button:nth-child(7){
+            grid-area:zona#{$var};
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+            font-size: 20px;
+            color: $colorMain;
+            margin-top: 20px;
+    }
+}    
+    @else{
+        label:nth-child(#{$var}){
+            grid-area: zona#{$var};
+        }
+    }
+}
+  
+    label {
+        display: flex;
+        flex-direction: column;
+    }
+    label input , label textarea {
+        background-color:transparent;
+        border: 0;
+        border-bottom: 1px solid white;
+        margin-top: 10px;
+        outline: none;
+        color: white;
+    }                    
+}
+
+

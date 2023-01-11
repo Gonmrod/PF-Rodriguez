@@ -7,6 +7,7 @@ $colorMain:  #a53636;
 @import "navegador";
 @import "footer";
 @import "mapResponsive";
+@import "formulario";
 @import "login";
 @import "galeria";
 @import "tarjetaTarifas";
@@ -154,87 +155,4 @@ main{
 
 aside{
     grid-area: aside;
-}
-
-
-.formulario{
-    background-color:#2b281f ;
-    max-width: 800px;
-    margin: 20px auto ;
-    border-radius: 10px;
-    color: white;
-    padding: 30px;
-    margin-bottom: 10px;
-    gap: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 60px;
-    grid-template-areas:  " titulo    titulo"
-                          "nomApell  email"
-                          "tel       asunto"
-                          "mensaje   mensaje"
-                          "button    button";
-}
-@media(max-width:800px){
-    .formulario{
-        width: 100vw;
-        margin: 20px 0px;
-        border-radius: 0px;
-        grid-template-columns: 1fr ;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 60px;
-        grid-template-areas:  "titulo"
-                              "nomApell"
-                              "email"
-                              "tel"
-                              "asunto"
-                              "mensaje"
-                              "button ";
-    }
-}
-
-.formulario h2{
-    grid-area: titulo;
-}
-
-.formulario label:nth-child(2){
-    grid-area: nomApell;
-}
-
-.formulario label:nth-child(3){
-    grid-area: email;
-}
-
-.formulario label:nth-child(4){
-    grid-area: tel;
-}
-.formulario label:nth-child(5){
-    grid-area:asunto;
-}
-.formulario label:nth-child(6){
-    grid-area:mensaje;
-}
-.formulario button:nth-child(7){
-    grid-area:button;
-    width: 200px;
-    border-radius: 5px;
-    border: none;
-    font-size: 20px;
-    color: #0a1266;
-    margin-top: 20px;
-}
-
-
-.formulario label {
-    display: flex;
-    flex-direction: column;
-
-}
-
-.formulario label input , .formulario label textarea {
-    background-color:transparent;
-    border: 0;
-    border-bottom: 1px solid white;
-    margin-top: 10px;
-    outline: none;
-    color: white;
 }

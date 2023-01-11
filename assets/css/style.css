@@ -155,6 +155,70 @@ footer > .sucursales {
     padding-left: 0%;
   }
 }
+.formulario {
+  background-color: #2b281f;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 10px;
+  color: white;
+  padding: 30px;
+  margin-bottom: 10px;
+  gap: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 60px;
+  grid-template-areas: "zona1    zona1" "zona2    zona3" "zona4    zona5" "zona6    zona6" "zona7    zona7";
+}
+@media (max-width: 800px) {
+  .formulario {
+    width: 100vw;
+    margin: 20px 0px;
+    border-radius: 0px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 60px;
+    grid-template-areas: "zona1" "zona2" "zona3" "zona4" "zona5" "zona6" "zona7";
+  }
+}
+.formulario h2:nth-child(1) {
+  grid-area: zona1;
+}
+.formulario label:nth-child(2) {
+  grid-area: zona2;
+}
+.formulario label:nth-child(3) {
+  grid-area: zona3;
+}
+.formulario label:nth-child(4) {
+  grid-area: zona4;
+}
+.formulario label:nth-child(5) {
+  grid-area: zona5;
+}
+.formulario label:nth-child(6) {
+  grid-area: zona6;
+}
+.formulario button:nth-child(7) {
+  grid-area: zona7;
+  width: 200px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+  color: #a53636;
+  margin-top: 20px;
+}
+.formulario label {
+  display: flex;
+  flex-direction: column;
+}
+.formulario label input, .formulario label textarea {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  margin-top: 10px;
+  outline: none;
+  color: white;
+}
+
 /*login*/
 .body-login {
   background-size: cover;
@@ -166,7 +230,7 @@ footer > .sucursales {
 }
 
 .login-box {
-  width: 450px;
+  max-width: 450px;
   height: 450px;
   background: #000;
   color: #fff;
@@ -537,77 +601,4 @@ main {
 
 aside {
   grid-area: aside;
-}
-
-.formulario {
-  background-color: #2b281f;
-  max-width: 800px;
-  margin: 20px auto;
-  border-radius: 10px;
-  color: white;
-  padding: 30px;
-  margin-bottom: 10px;
-  gap: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 60px;
-  grid-template-areas: " titulo    titulo" "nomApell  email" "tel       asunto" "mensaje   mensaje" "button    button";
-}
-
-@media (max-width: 800px) {
-  .formulario {
-    width: 100vw;
-    margin: 20px 0px;
-    border-radius: 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 60px;
-    grid-template-areas: "titulo" "nomApell" "email" "tel" "asunto" "mensaje" "button ";
-  }
-}
-.formulario h2 {
-  grid-area: titulo;
-}
-
-.formulario label:nth-child(2) {
-  grid-area: nomApell;
-}
-
-.formulario label:nth-child(3) {
-  grid-area: email;
-}
-
-.formulario label:nth-child(4) {
-  grid-area: tel;
-}
-
-.formulario label:nth-child(5) {
-  grid-area: asunto;
-}
-
-.formulario label:nth-child(6) {
-  grid-area: mensaje;
-}
-
-.formulario button:nth-child(7) {
-  grid-area: button;
-  width: 200px;
-  border-radius: 5px;
-  border: none;
-  font-size: 20px;
-  color: #0a1266;
-  margin-top: 20px;
-}
-
-.formulario label {
-  display: flex;
-  flex-direction: column;
-}
-
-.formulario label input, .formulario label textarea {
-  background-color: transparent;
-  border: 0;
-  border-bottom: 1px solid white;
-  margin-top: 10px;
-  outline: none;
-  color: white;
 }/*# sourceMappingURL=style.css.map */
