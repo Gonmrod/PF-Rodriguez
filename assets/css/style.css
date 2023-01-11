@@ -155,6 +155,15 @@ footer > .sucursales {
     padding-left: 0%;
   }
 }
+.formulario label input, .formulario label textarea {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  margin-top: 10px;
+  outline: none;
+  color: white;
+}
+
 .formulario {
   background-color: #2b281f;
   max-width: 800px;
@@ -210,15 +219,6 @@ footer > .sucursales {
   display: flex;
   flex-direction: column;
 }
-.formulario label input, .formulario label textarea {
-  background-color: transparent;
-  border: 0;
-  border-bottom: 1px solid white;
-  margin-top: 10px;
-  outline: none;
-  color: white;
-}
-
 /*login*/
 .body-login {
   background-size: cover;

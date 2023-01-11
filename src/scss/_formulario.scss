@@ -38,12 +38,7 @@
     @else if($var == 7){
         button:nth-child(7){
             grid-area:zona#{$var};
-            width: 200px;
-            border-radius: 5px;
-            border: none;
-            font-size: 20px;
-            color: $colorMain;
-            margin-top: 20px;
+            @include boton(200px);
     }
 }    
     @else{
@@ -58,12 +53,7 @@
         flex-direction: column;
     }
     label input , label textarea {
-        background-color:transparent;
-        border: 0;
-        border-bottom: 1px solid white;
-        margin-top: 10px;
-        outline: none;
-        color: white;
+        @extend %input
     }                    
 }
 
