@@ -1,0 +1,25 @@
+/* Map responsive*/
+.map-responsive {
+    position: relative;
+    height: 0;
+        iframe {
+            top: 1%;
+            right: 25%;
+            height: 49.8vh;
+            width: 60vw;
+            position: absolute;
+            padding-left: 10%;
+        }
+}
+  
+  @media (max-width: 700px) {
+    .map-responsive iframe{
+      top: 5%;
+      right: 25%;
+      left: 10%;
+      height: 49.8vh;
+      width: 80vw;
+      position: absolute;
+      padding-left: 0%;
+      }
+}

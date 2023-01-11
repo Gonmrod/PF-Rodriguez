@@ -3,6 +3,7 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    grid-area: footer;
     background-color:#181818fa;
 }
 
@@ -35,4 +36,12 @@ footer > .sucursales {
     display: flex;
     gap: 10px;
     padding: 10px;
+}
+
+@media(max-width:630px){
+    footer > .sucursales {
+       flex-wrap: wrap;
+        padding: 10px;
+    
+    }
 }
