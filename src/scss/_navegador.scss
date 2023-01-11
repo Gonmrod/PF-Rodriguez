@@ -1,0 +1,85 @@
+.navegador{
+    grid-area: nav;
+    background-color:#181818fa;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: end;
+    }
+         li{
+        position: relative; 
+    }
+            a {
+                display: block;
+                padding: 20px;
+                text-decoration: none;
+                color: white;
+                font-size: 24px;
+            }
+}
+.navegador-info{
+    
+    h1{
+        margin-left: -700px; 
+        color: white;
+    }
+}
+
+.fa-bars{
+    display: none;
+}
+
+.navegador > ul > li > a:hover + ul{
+    max-height: 300px;
+}
+
+@media(max-width:576px){
+    .navegador{
+        justify-content: start;
+    }
+    .navegador i{
+
+        position: absolute;
+        z-index: 2;
+        display: block;
+        color: white;
+        font-size: 36px;
+    }
+    .navegador > ul >li > ul {
+        position: static;
+        left: 0;
+        
+    }
+    .navegador > ul > li{
+        width: 150px;
+        text-align: center;
+        
+    }
+    .navegador > ul{
+        position: fixed;
+        overflow-y: scroll;
+        z-index: 1;
+        top: 0;
+        left: -350px;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        padding-top: 70px;
+        background-color: $colorMain;
+        width: 250px;
+        height: 100vh;
+        transition: 0.2s;
+    }
+   .navegador > i:hover + ul {
+    left: 0;
+   }
+   .navegador > ul:hover {
+    left: 0;
+   }
+}

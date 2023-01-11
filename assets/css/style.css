@@ -4,6 +4,86 @@
   box-sizing: border-box;
 }
 
+.navegador {
+  grid-area: nav;
+  background-color: rgba(24, 24, 24, 0.9803921569);
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.navegador ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: end;
+}
+.navegador li {
+  position: relative;
+}
+.navegador a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+
+.navegador-info h1 {
+  margin-left: -700px;
+  color: white;
+}
+
+.fa-bars {
+  display: none;
+}
+
+.navegador > ul > li > a:hover + ul {
+  max-height: 300px;
+}
+
+@media (max-width: 576px) {
+  .navegador {
+    justify-content: start;
+  }
+  .navegador i {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    color: white;
+    font-size: 36px;
+  }
+  .navegador > ul > li > ul {
+    position: static;
+    left: 0;
+  }
+  .navegador > ul > li {
+    width: 150px;
+    text-align: center;
+  }
+  .navegador > ul {
+    position: fixed;
+    overflow-y: scroll;
+    z-index: 1;
+    top: 0;
+    left: -350px;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding-top: 70px;
+    background-color: #a53636;
+    width: 250px;
+    height: 100vh;
+    transition: 0.2s;
+  }
+  .navegador > i:hover + ul {
+    left: 0;
+  }
+  .navegador > ul:hover {
+    left: 0;
+  }
+}
 footer {
   color: white;
   display: flex;
@@ -236,108 +316,6 @@ footer > .sucursales {
   grid-template-areas: " nav    nav    nav    nav" "main   main   main   main" "footer footer footer footer";
 }
 
-.navegador {
-  grid-area: nav;
-  background-color: rgba(24, 24, 24, 0.9803921569);
-  padding: 20px;
-  position: relative;
-  z-index: 2;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-
-.navegador-info h1 {
-  margin-left: -700px;
-  color: white;
-}
-
-.fa-bars {
-  display: none;
-}
-
-.navegador > ul {
-  list-style-type: none;
-  display: flex;
-  justify-content: end;
-}
-
-.navegador > ul > li {
-  position: relative;
-}
-
-.verSubItems {
-  max-height: 300px;
-}
-
-.navegador ul li a {
-  display: block;
-  padding: 20px;
-  text-decoration: none;
-  color: white;
-  font-size: 24px;
-}
-
-.navegador > ul > li > a:hover + ul {
-  max-height: 300px;
-}
-
-.navegador > ul > li > ul {
-  max-height: 0px;
-  overflow-y: hidden;
-  position: absolute;
-  z-index: 2;
-  list-style-type: none;
-  background-color: #a53636;
-  left: -10px;
-  transition: 0.5s;
-}
-
-.navegador > ul > li > ul > li > a {
-  font-size: 20px;
-}
-
-@media (max-width: 576px) {
-  .navegador {
-    justify-content: start;
-  }
-  .navegador i {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    color: white;
-    font-size: 36px;
-  }
-  .navegador > ul > li > ul {
-    position: static;
-    left: 0;
-  }
-  .navegador > ul > li {
-    width: 150px;
-    text-align: center;
-  }
-  .navegador > ul {
-    position: fixed;
-    overflow-y: scroll;
-    z-index: 1;
-    top: 0;
-    left: -350px;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding-top: 70px;
-    background-color: #a53636;
-    width: 250px;
-    height: 100vh;
-    transition: 0.2s;
-  }
-  .navegador > i:hover + ul {
-    left: 0;
-  }
-  .navegador > ul:hover {
-    left: 0;
-  }
-}
 .encabezado {
   background-size: cover;
   grid-area: header;
