@@ -131,7 +131,7 @@ main{
 }
 .tarjeta{
     display: flex;
-    width: 250px;
+    width: 350px;
     gap: 5px;
     padding-bottom: 75px;
     margin: 10px;
@@ -139,6 +139,7 @@ main{
 }
 .tarjeta-info{
     h3{
+        margin-top: 30px;
         text-align: center;
     }
     p{
