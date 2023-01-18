@@ -54,7 +54,12 @@
     }
     label input , label textarea {
         @extend %input
-    }                    
+    }
+    @media(max-width: 231px){
+        button{
+            max-width: 100px;
+        }
+    }            
 }
 
 

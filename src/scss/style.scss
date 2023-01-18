@@ -106,6 +106,9 @@ $colorMain:  #a53636;
         object-fit: cover;
         background-size: cover;
     }
+    @media(max-width: 380px){
+        font-size: larger;
+    }
 }
 
 main{

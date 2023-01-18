@@ -237,6 +237,12 @@ footer > .sucursales {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 231px) {
+  .formulario button {
+    max-width: 100px;
+  }
+}
+
 /*login*/
 .body-login {
   background-size: cover;
@@ -245,6 +251,16 @@ footer > .sucursales {
   justify-content: center;
   text-align: center;
   height: 50vh;
+}
+@media (max-width: 776px) {
+  .body-login {
+    height: 35vh;
+  }
+}
+@media (max-width: 429px) {
+  .body-login {
+    height: 15vh;
+  }
 }
 
 .login-box {
@@ -568,6 +584,11 @@ footer > .sucursales {
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
+}
+@media (max-width: 380px) {
+  .encabezado-info {
+    font-size: larger;
+  }
 }
 
 main {

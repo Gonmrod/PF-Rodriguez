@@ -7,6 +7,14 @@
     justify-content: center;
     text-align: center;
     height: 50vh;
+  @media(max-width: 776px){
+    height: 35vh;
+  }
+  @media(max-width: 429px){
+    height: 15vh;
+
+  }
+    
  }
  .login-box {
     max-width: 450px;
