@@ -131,30 +131,48 @@ footer > .sucursales {
   }
 }
 /* Map responsive*/
-.map-responsive {
-  position: relative;
-  height: 0;
+.contenido-contacto-map {
+  background-color: #a53636;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.texto-map {
+  width: 500px;
+  font-size: x-large;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: white;
+  padding: 50px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
 .map-responsive iframe {
-  top: 1%;
-  right: 25%;
-  height: 49.8vh;
-  width: 60vw;
-  position: absolute;
-  padding-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 65vw;
+  padding-left: 5%;
+  margin-right: 5px;
 }
 
 @media (max-width: 700px) {
-  .map-responsive iframe {
-    top: 5%;
-    right: 25%;
-    left: 10%;
-    height: 49.8vh;
-    width: 80vw;
-    position: absolute;
-    padding-left: 0%;
+  .contenido-contacto-map {
+    display: flex;
+    flex: wrap;
+    align-items: center;
+    justify-content: center;
   }
 }
+.map-responsive iframe {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90vw;
+  padding-left: 0%;
+}
+
 .formulario label input, .formulario label textarea {
   background-color: transparent;
   border: 0;
